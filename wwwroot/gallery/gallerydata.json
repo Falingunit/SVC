@@ -1,3 +1,95 @@
-{
-
-}
+[
+  {
+    "name": "general",
+    "description": "testing",
+    "images": [
+      {
+        "id": "1",
+        "description": "Outside view",
+        "path": "front-outside.jpg"
+      },
+      {
+        "id": "2",
+        "description": "The reception",
+        "path": "front-reception.jpg"
+      },
+      {
+        "id": "3",
+        "description": "The reception",
+        "path": "out-reception-view.jpg"
+      },
+      {
+        "id": "4",
+        "description": "Pharmacy",
+        "path": "pharmacy.jpeg"
+      }
+    ]
+  },
+  {
+    "name": "triages",
+    "description": "tetetestnining",
+    "images": [
+      {
+        "id": "1",
+        "description": "General ward",
+        "path": "1st-floor.jpeg"
+      },
+      {
+        "id": "2",
+        "description": "Ground-floor triage",
+        "path": "ground-floor.jpeg"
+      },
+      {
+        "id": "3",
+        "description": "ICU",
+        "path": "icu.jpeg"
+      },
+      {
+        "id": "4",
+        "description": "Pediatric ward",
+        "path": "pediatric-triage.jpg"
+      }
+    ]
+  },
+  {
+    "name": "pediatric",
+    "description": "Pediatric",
+    "images": [
+      {
+        "id": "1",
+        "description": "Pediatric waiting area",
+        "path": "pediatric-waiting.jpg"
+      },
+      {
+        "id": "1",
+        "description": "Consultation room",
+        "path": "pediatric-op.jpg"
+      },
+      {
+        "id": "1",
+        "description": "Pediatric physiotherapy room",
+        "path": "pediatric-1.jpg"
+      },
+      {
+        "id": "1",
+        "description": "Pediatric ward",
+        "path": "pediatric-triage.jpg"
+      },
+      {
+        "id": "1",
+        "description": "Pediatric patient room",
+        "path": "2nd-floor-room.jpeg"
+      },
+      {
+        "id": "1",
+        "description": "Play area",
+        "path": "playground.jpg"
+      },
+      {
+        "id": "1",
+        "description": "Kids friendly pediatric ward  ",
+        "path": "playground-2.jpg"
+      }
+    ]
+  }
+]

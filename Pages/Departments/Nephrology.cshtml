@@ -1,0 +1,121 @@
+﻿@page
+@model SVC.Pages.Departments.DepartmentsModel
+@{
+    ViewData["Title"] = "Nephrology Clinic";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/departmentpages.css" />
+    <link rel="stylesheet" href="~/css/gallery.css" />
+</head>
+
+<script src="~/js/gallery.js"></script>
+
+<div class="" style="overflow:hidden;">
+
+    <h1 class="text-center title">
+        Nephrology Clinic
+    </h1>
+</div>
+
+
+<main role="main" style="margin-top:3rem;">
+    <div class="container">
+        <p class="text-start col" style="font-size:24px;">
+            Welcome to the Nephrology Clinic at S V Clinic. Our clinic is led by Dr. Gopi Krishnan, MD, DM, and is dedicated to the diagnosis, evaluation, and management of both chronic and acute kidney diseases. The clinic operates every Monday at 5:30 PM. Please note that an appointment is mandatory.
+        </p>
+
+        <div class="row hod">
+            <div class="col d-flex flex-column">
+                <h3>Head of the department: </h3>
+                <h4>Dr. Gopi Krishnan </h4>
+                <h5> M.D., D.M</h5>
+            </div>
+
+            <div class="col-sm-10 d-flex flex-column hod-image">
+                <img src="~/images/front-reception.jpg" style="width: 100%" />
+            </div>
+        </div>
+
+        <h2 class="title">Services We Offer:</h2>
+
+        <ul class="list-group">
+            <li>
+                <p class="service-title">
+                    Diagnosis and Evaluation:
+                </p>
+                <ul>
+                    <li>
+                        <p class="service-description-list">
+                            Comprehensive evaluation and diagnosis of kidney diseases.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="service-description-list">
+                            Preventive nephrology to identify and manage risk factors early.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="service-title">
+                    Management of Kidney Diseases:
+                </p>
+                <ul>
+                    <li>
+                        <p class="service-description-list">
+                            Treatment plans for chronic kidney disease (CKD) and acute kidney injury (AKI).
+                        </p>
+                    </li>
+                    <li>
+                        <p class="service-description-list">
+                            Continuous monitoring and adjustment of treatment strategies.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="title">Facilites for Investigation:</h2>
+        <ul class="list-group">
+            <li>
+                <p class="service-description service-title">
+                    Ultrasound (USG) KUB (Kidneys, Ureters, Bladder)
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Renal Function Tests (RFT)
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Electrolyte Analysis
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Arterial Blood Gas (ABG) Analysis
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Vitamin D and Phosphate Levels
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Urine Spot Protein/Creatinine Ratio (PCR)
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Urine Routine Examination (RE)
+                </p>
+            </li>
+        </ul>
+
+
+    </div>
+</main>

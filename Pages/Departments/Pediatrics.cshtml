@@ -1,10 +1,160 @@
 ﻿@page
-@model SVC.Pages.Departments.PediatricsModel
+@model SVC.Pages.Departments.DepartmentsModel
 @{
-	ViewData["Title"] = "Department of Medicine";
-	Layout = "../Shared/_Layout.cshtml";
+    ViewData["Title"] = "Department of Pediatrics";
+    Layout = "../Shared/_Layout.cshtml";
 }
 
-<main role="main" class="container" style="margin-top:1rem;">
-	<h1 class="text-center">Department of Pediatrics</h1>
+<head>
+    <link rel="stylesheet" href="~/css/departmentpages.css" />
+    <link rel="stylesheet" href="~/css/gallery.css" />
+</head>
+
+<script src="~/js/gallery.js"></script>
+
+<div class="" style="overflow:hidden;">
+
+    <h1 class="text-center title">
+        Department of Pediatrics
+    </h1>
+</div>
+
+
+<main role="main" style="margin-top:3rem;">
+    <div class="container">
+        <p class="text-start col" style="font-size:24px;">
+            Welcome to the S V Clinic Pediatric Wing, specializing in general and preventive pediatrics. Led by Dr. T.G. Nalini, we provide primary and preventive health care services to children from birth through adolescence. We strive to offer the highest quality care to ensure the health and well-being of your child. Our experienced team is here to support you through every stage of your child's development.<span class="br"></span>
+            <b>Preventive Care</b>: We emphasize the importance of preventive care by educating parents and caregivers on health practices and disease prevention.<span class="br"></span>
+            <b>Immunization:</b> We provide immunizations in accordance with the National Immunization Schedule and the IAP Immunization Schedule, ensuring your child is protected against various preventable diseases.<span class="br"></span>
+            <b>Breastfeeding Support:</b> We are committed to the Baby-Friendly Hospital Initiative (BFHI) and actively promote and support breastfeeding to ensure the best start for your baby.
+        </p>
+
+        <div class="row hod">
+            <div class="col d-flex flex-column">
+                <h3>Head of the department: </h3>
+                <h4>Dr. T. G. Nalini</h4>
+                <h5>M.B.B.S., D.C.H.</h5>
+            </div>
+
+            <div class="col-sm-10 d-flex flex-column hod-image">
+                <img src="~/images/front-reception.jpg" style="width: 100%" />
+            </div>
+        </div>
+
+        <h2 class="title">Gallery</h2>
+        <div class="gallery-instance">
+            <div class="gallery-container d-flex justify-content-center align-items-center position-relative">
+                <div class="gallery position-relative overflow-hidden">
+                    @{
+                        var images2 = Model.GalleryService.GetImages("pediatric");
+                        for (int i = 0; i < images2.Count(); i++)
+                        {
+                            var image = images2.ElementAt(i);
+                            <div class="gallery-item position-absolute">
+                                <img class="gallery-image" itemid="image-@i" src="@image.Path" />
+                                <div class="caption">@image.Description</div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="thumbnail-list d-flex justify-content-center mt-3 thumbnail-list-gallery">
+                @{
+                    for (int i = 0; i < images2.Count(); i++)
+                    {
+                        var image = images2.ElementAt(i);
+                        <img class="thumbnail-image mx-2" itemid="thumb-@i" src="@image.Path" style="width: 50px; height: auto; cursor: pointer;" />
+                    }
+                }
+            </div>
+        </div>
+
+        <h2 class="title">Commonly treated conditions:</h2>
+        <ul class="list-group" style="margin-left:5rem;">
+            <li>
+                <p class="service-description service-title">
+                    Fever                
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Common cold and flu
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Abdominal pain
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Headaches
+                </p>
+            </li>
+        </ul>
+
+        <h2 class="title">Specially treated conditions:</h2>
+        <ul class="list-group" style="margin-left:5rem;">
+            <li>
+                <p class="service-description service-title">
+                    Dengue fever
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Malaria
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Typhoid
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Childhood asthma
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Nephrotic syndrome
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Seizure disorders
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Diarrheal diseases
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Rheumatic heart disease
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Anemia
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Epidemic infectious diseases
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Pneumonia
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Malnutrition
+                </p>
+            </li>
+        </ul>
+    </div>
 </main>

@@ -5,14 +5,13 @@ using SVC.Services;
 
 namespace SVC.Pages
 {
-    public class GalleryModel : PageModel
+    public class LabModel : PageModel
     {
         public JsonFileGalleryImageService GalleryService;
 
-        public GalleryModel(JsonFileGalleryImageService galleryService)
+        public LabModel(JsonFileGalleryImageService galleryService)
         {
             this.GalleryService = galleryService;
-            
         }
     }
 }

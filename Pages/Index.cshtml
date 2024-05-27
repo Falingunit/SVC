@@ -5,23 +5,38 @@
     Layout = "Shared/_Layout.cshtml";
 }
 
-<style>
+<head>
+    <link href="~/css/home.css" rel="stylesheet" />
+</head>
 
-    .vision {
-        position: absolute;
-        transform: translateX(-50%) translateY(10rem);
-        width: 500px;
-        backdrop-filter: blur(3px);
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 15px;
-        box-shadow: 5px 5px 75px 20px rgba(0, 0, 0, 1);
-    }
 
-</style>
+<main class="container-fluid" style="z-index=2">
+    <img src="~/images/front-outside.jpg" style="width:100%; max-height: 500px; object-fit: cover; object-position: 0px -250px" />
 
-<div class="header-row" id="banner" style="padding: 0px; overflow:hidden;">
-    <main class="container-fluid" style="padding: 0px;">
-      
-        </main>
-        <img src="~/images/front-reception.jpg" style="width:100%"/>
-</div>
+    <div class="text-center intro-paragraph">
+        Founded in 2013, S V Clinic is a 30-bed secondary healthcare facility located in a semi-urban area. Our mission is to provide evidence-based medical care at an affordable cost. We offer state-of-the-art care in emergency medicine, general medicine, and pediatrics, ensuring high-quality treatment for all our patients.
+    </div>
+
+    <h2 style="padding-top: 5rem">Our services</h2>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="col text-center boxed">
+            <p class="display-6">Emergency Medicine</p>
+            <p>
+                Available 24/7 to provide immediate care for urgent medical needs.
+            </p>
+        </div>
+        <div class="col text-center boxed">
+            <p class="display-6">General Medicine</p>
+            <p>
+                Comprehensive care for a wide range of medical conditions.
+            </p>
+        </div>
+        <div class="col text-center boxed">
+            <p class="display-6">Pediatric Medicine</p>
+            <p style="padding-bottom: 1.5rem; padding-top: 1.5rem">
+                Specialized care for infants, children, and adolescents.
+            </p>
+        </div>
+    </div>
+</main>

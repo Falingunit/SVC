@@ -1,0 +1,46 @@
+﻿.title {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgb(215, 250, 246);
+}
+
+.hod {
+    margin-top: 2rem;
+}
+
+.hod-image{
+    width: 40%;
+}
+
+h2, .h2{
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.service-title {
+    margin-top: 2rem;
+    font-size: 26px;
+    font-weight: 600 !important;
+}
+
+.service-description {
+    font-size: 24px;
+    margin-top: initial !important;
+}
+
+.service-description-list {
+    font-size: 20px !important;
+    margin-top: 0.5rem !important;
+    font-weight: 500 !important;
+}
+
+.service-description-list {
+    font-size: 20px !important;
+    margin-top: 0.5rem !important;
+    font-weight: 500 !important;
+}
+
+.br {
+    display: block;
+    margin-bottom: 1em;
+} 

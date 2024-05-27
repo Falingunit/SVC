@@ -9,97 +9,109 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SVC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-lg navbar-dark bg-black  theme-secondary-bg" style="padding-top:0px; width:100%; margin-top: 10px">
-
-            <div class="container-fluid justify-self-center theme-secondary-bg" style="padding-right:0px;">
-
-                <div class="row">
-                    <div class="row flex-fill justify-content-center theme-bg" style="padding-bottom:1rem; width:100%;">
-
-                        <img src="~/images/logo.svg" class="col-1" style="height: auto;" />
-
-                        <div class="col row">
-                            <h1 class="col text-center display-1" style="font-size: 5rem; font-weight: 500">
-                                S. V. Clinic
-                            </h1>
-                        </div>
-
-                        <img src="~/images/nabh-accredited-logo.svg" class="col-1" style="height:auto" />
-
-                    </div>
-
-                    <div class="container theme-secondary-bg">
-
-                        <button class="navbar-toggler dropdown-menu-dark" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="navbar-collapse collapse justify-content-between theme-secondary-bg" style="padding-top:0.5rem;">
-                            <ul class="navbar-nav flex-grow-1 justify-content-center gap-2">
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Index">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <div class="dropdown-list">
-                                        <a class="nav-link dropdown-toggler navbar-colored" asp-page="/Departments/Departments">Departments ▼</a>
-                                        <div class="dropdown-content">
-                                            <a class="dropdown-item" asp-area="" asp-page="/Departments/Medicine">Department of Medicine</a>
-                                            <a class="dropdown-item" asp-area="" asp-page="/Departments/Pediatrics">Department of Pediatrics</a>
-                                            <a class="dropdown-item" asp-area="" asp-page="/Departments/EmergencyMedicine">Department of Emergency Medicine</a>
-                                            <a class="dropdown-item" asp-area="" asp-page="/Departments/Physiotherapy">Department of Physiotherapy</a>
-
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Doctors</a>
-                                </li>     
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/VisitingConsultants">Visiting Consultants</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Facilities</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Health Education</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Gallery">Gallery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Join us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">About us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Contact us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Events</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Book an appointment</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <header class="hide-on-scroll">
+        <div class="theme-bg text-center py-3">
+            <div class="container-fluid d-flex justify-content-center align-items-center" style="max-height: 100px">
+                <img src="~/images/logo.svg" class="col-1" style="height: auto; max-height: 100px" />
+                <div class="col">
+                    <h1 class="col text-center display-1 display-md-3 display-sm-4 display-xs-5" style="font-weight: 500">S. V. Clinic</h1>
+                    <p style="margin-top: -8px"> A NABH entry-level certified hospital located in Palladam, Tirupur</p>
                 </div>
+                <img src="~/images/nabh-accredited-logo.svg" class="col-1" style="height:auto; max-height: 100px" />
             </div>
-        </nav>
+        </div>
     </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black theme-secondary-bg sticky-top">
+        <div class="container-fluid justify-self-center theme-secondary-bg" style="padding-right:0px;">
+            <button class="navbar-toggler dropdown-menu-dark" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-between theme-secondary-bg" style="padding-top:0.5rem;">
+                <ul class="navbar-nav flex-grow-1 justify-content-center gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-list">
+                            <a class="nav-link dropdown-toggler navbar-colored" asp-page="/Departments/Departments">Departments <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/Medicine">Department of Medicine</a>
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/EmergencyMedicine">Department of Emergency Medicine</a>
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/Pediatrics">Department of Pediatrics</a>
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/DevPediatrics">Department of Developmental Pediatrics</a>
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/Physiotherapy">Department of Physiotherapy</a>                                
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/PediatricER">Pediatric ER</a>
+                                <a class="dropdown-item" asp-area="" asp-page="/Departments/Nephrology">Nephrology Clinic</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Lab">Laboratory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/VisitingConsultants">Visiting Consultants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Health Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Join us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/ContactPage">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-colored" asp-area="" asp-page="/Privacy">Book an appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     @RenderBody()
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        // JavaScript to hide the header on scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastScrollTop = 0;
+            window.addEventListener("scroll", function () {
+                var st = window.pageYOffset || document.documentElement.scrollTop;
+                var header = document.querySelector(".hide-on-scroll");
+                if (st > lastScrollTop) {
+                    header.classList.add("hidden");
+                } else {
+                    header.classList.remove("hidden");
+                }
+                lastScrollTop = st;
+            });
+        });
+    </script>
 
 </body>
 </html>

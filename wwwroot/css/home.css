@@ -1,0 +1,42 @@
+﻿main {
+    padding-top: 1rem;
+    position: relative; /* Ensure main is positioned relative */
+    z-index: 1; /* Ensure main content is above the blur overlay */
+    backdrop-filter: brightness(1.1) blur(8px);
+    height: 100%;
+}
+
+.intro-paragraph {
+    background-color: rgba(104, 255, 238, 0.7);
+    padding: 10px;
+    font-size: 30px;
+    backdrop-filter:blur(10px);
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.boxed {
+    background-color: rgba(104, 255, 238, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    transition-duration: 0.25s;
+}
+
+    .boxed:hover {
+        background-color: rgb(60, 134, 126, 0.70);
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 30px;
+        box-shadow: 5px 5px 10px rgb(24, 59, 55);
+    }
+
+.bg-image {
+    position: fixed;
+    height: 100%;
+    filter: brightness(1.1) blur(2.5px);
+    -webkit-filter: brightness(1.1) blur(2.5px);
+}

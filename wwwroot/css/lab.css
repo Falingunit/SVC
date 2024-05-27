@@ -1,0 +1,31 @@
+﻿.machine-row.odd {
+    background-color: rgb(194, 237, 232);
+    margin-left: calc((100vw - 100%) / -2) !important;
+    padding-left: calc((100vw - 100%) / 2);
+    margin-right: calc((100vw - 100%) / -2) !important;
+    padding-right: calc((100vw - 100%) / 2);
+}
+
+.machine-row.even {
+    background-color: rgb(255, 255, 255);
+    margin-left: calc((100vw - 100%) / -2) !important;
+    padding-left: calc((100vw - 100%) / 2);
+    margin-right: calc((100vw - 100%) / -2) !important;
+    padding-right: calc((100vw - 100%) / 2);
+}
+
+.machine-row{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.machine-image{
+    justify-self: center;
+    max-width: 700px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.machine-description{
+    font-size: 19px !important;
+}
