@@ -24,8 +24,19 @@
     max-width: 700px;
     max-height: 500px;
     object-fit: contain;
+    width: 10vw;
 }
 
 .machine-description{
-    font-size: 19px !important;
+    font-size: var(--font-size-medium);
 }
+
+.page-container {
+    width: 700px;
+}
+
+    @media (max-width: 1700px) and (min-width: 1500px) {
+        .page-container {
+            width: 500px;
+        }
+    }

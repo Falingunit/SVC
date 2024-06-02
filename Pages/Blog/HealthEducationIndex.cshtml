@@ -1,0 +1,43 @@
+﻿@page
+@model HealthEducationIndexModel
+
+@{
+    ViewData["Title"] = "Blog Posts";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    string GetGist(Models.BlogPost item)
+    {
+        if (item.Gist != null)
+        {
+            return item.Gist;
+        }
+        else
+        {
+            return item.Content.Substring(0, 500) + "...";
+        }
+    }
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/healtheducationindex.css" />
+</head>
+
+<div class="container" style="margin-top: 2rem;">
+    <h1 class="title">Blog Posts</h1>
+</div>
+<div class="container-fluid" style="margin-top: 2rem;">
+    <div class="grid">
+        @foreach (var item in Model.BlogPosts)
+        {
+            <div class="page-container">
+                <p>@item.Title</p>
+                <p>@item.DateCreated</p>
+                <p>@GetGist(item)
+                <a asp-page="./HealthEducationPost" asp-route-id="@item.Id">View</a>
+                </p>
+            </div>
+        }
+    </div>
+    <a asp-page="./CreateHealthEducationPost">Create New</a>
+</div>
+

@@ -7,6 +7,39 @@ document.addEventListener("DOMContentLoaded", function () {
         const thumbnails = galleryInstance.querySelectorAll(".thumbnail-image");
         const totalItems = items.length;
 
+        items.forEach((item, idx) => {
+            item.addEventListener('touchstart', function (event) {
+                startX = event.touches[0].clientX;
+                startY = event.touches[0].clientY;
+            }, false);
+
+            item.addEventListener('touchmove', function (event) {
+            }, false);
+
+            item.addEventListener('touchend', function (event) {
+                const endX = event.changedTouches[0].clientX;
+                const endY = event.changedTouches[0].clientY;
+
+                const deltaX = endX - startX;
+                const deltaY = endY - startY;
+
+                // Check if vertical distance moved is more than twice the horizontal distance
+                if (Math.abs(deltaY) > 2 * Math.abs(deltaX)) {
+                    event.preventDefault(); // Prevent default scroll behavior
+                } else {
+                    // Swipe horizontal detection
+                    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                        if (deltaX < 0) {
+                            currentIdx = (currentIdx + 1) % totalItems;
+                        } else {
+                            currentIdx = (currentIdx - 1 + totalItems) % totalItems;
+                        }
+                        updateGallery(currentIdx);
+                    }
+                }
+            }, false);
+        });
+
         function updateGallery(newIdx) {
             items.forEach((item, idx) => {
                 item.classList.remove("current", "immediate", "far");

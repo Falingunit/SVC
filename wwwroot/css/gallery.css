@@ -37,11 +37,14 @@
     padding-bottom: 1rem !important;
 }
 
+
 @media(max-width:800px){
     .gallery-image {
         max-width: 300px;
     }
-
+    .thumbnail-image {
+        max-width: 30px;
+    }
     .gallery-container{
         height: 40vh;
     }
@@ -50,6 +53,9 @@
 @media(max-width: 1190px) and (min-width: 800px){
     .gallery-image{
         max-width: 500px;
+    }
+    .thumbnail-image{
+        max-width: 100px;
     }
     .gallery-container {
         height: 50vh;

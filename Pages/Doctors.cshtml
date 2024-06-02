@@ -1,0 +1,74 @@
+﻿@page
+@model SVC.Pages.DoctorsModel
+@{
+    ViewData["Title"] = "Doctors";
+    Layout = "Shared/_Layout.cshtml";
+}
+
+<main role="main">
+    <div class="container">
+        <h1 class="text-center title">
+            Our Doctors
+        </h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/images/dr-balamurali.jpg" alt="Dr. K. Balamurali" class="img-fluid rounded-circle">
+            </div>
+
+            <div class="col-md-8">
+                <div class="doctor-profile">
+                    <h2 class="doctor-name">Dr. K. Balamurali, MBBS MD</h2>
+                    <p class="doctor-title">Senior Consultant Physician</p>
+                    <p class="doctor-reg">Reg No: TN 69724</p>
+                    <h3>Educational Qualifications:</h3>
+                    <ul>
+                        <li>MBBS – completed in 2002 at Thanjavur Medical College</li>
+                        <li>MD in General Medicine - completed in 2013 at Kilpauk Medical College</li>
+                    </ul>
+                    <h3>Additional Qualifications:</h3>
+                    <ul>
+                        <li>FIEcho by CGP, IMA a comprehensive clinical oriented certificate programme in Echocardiography</li>
+                        <li>DFID – by CMC Vellore in Diabetes management</li>
+                    </ul>
+                    <h3>Work Experience:</h3>
+                    <ul>
+                        <li>Tutor in Community Medicine at PSG IMSR Coimbatore – 2002 to 2004</li>
+                        <li>Insurance Medical Officer at ESIC Model Hospital, Kollam – 2004 to 2006</li>
+                        <li>Assistant Surgeon at Govt PHC Kudimangalam – 2006 to 2009</li>
+                        <li>Consultant Physician at Govt Hospital Palladam – 2013 to 2015</li>
+                        <li>Currently Senior Consultant Physician at S V Clinic Palladam</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/images/doctor-placeholder.jpg" alt="Doctor Name" class="img-fluid rounded-circle">
+            </div>
+
+            <div class="col-md-8">
+                <div class="doctor-profile">
+                    <h2 class="doctor-name">Doctor Name, Qualifications</h2>
+                    <p class="doctor-title">Job Title</p>
+                    <p class="doctor-reg">Reg No: Registration Number</p>
+                    <h3>Educational Qualifications:</h3>
+                    <ul>
+                        <li>Qualification details</li>
+                    </ul>
+                    <h3>Additional Qualifications:</h3>
+                    <ul>
+                        <li>Additional qualifications details</li>
+                    </ul>
+                    <h3>Work Experience:</h3>
+                    <ul>
+                        <li>Work experience details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

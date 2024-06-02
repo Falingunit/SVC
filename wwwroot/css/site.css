@@ -1,29 +1,129 @@
 :root {
     --main-theme: rgb(41, 248, 225);
-    --backgorund: rgb(215, 250, 246);
+    --navbar-color: 41, 248, 225;
+    --background: rgb(215, 250, 246);
+    --background-alpha: rgba(38, 92, 86, 0.40);
+    --background-variable: 215, 250, 246;
     --background-link: rgb(167, 251, 242);
     --active-button: rgb(64, 160, 149);
     --active-button-shadow: rgb(47, 117, 109);
     --dropdown-background: rgba(104, 255, 238, 0.5);
+    --font-size-small: clamp(0.75rem, 0.9vw, 1rem);
+    --font-size-medium: clamp(0.875rem, 1.2vw, 1.75rem);
+    --font-size-large: clamp(1.125rem, 1.5vw, 2.5rem);
+    --font-size-xlarge: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: var(--font-size-medium); /* Apply responsive font size */
+}
+
+h1, .display-1 {
+    font-size: var(--font-size-xlarge);
+}
+
+h2, .display-2 {
+    font-size: var(--font-size-large);
+}
+
+h3, .display-3 {
+    font-size: var(--font-size-large);
+}
+
+h4, .display-4 {
+    font-size: var(--font-size-medium);
+}
+
+h5, .display-5 {
+    font-size: var(--font-size-medium);
+}
+
+h6, .display-6 {
+    font-size: var(--font-size-small);
+}
+
+p, .lead {
+    font-size: var(--font-size-medium);
 }
 
 .title {
-    background-color: var(--backgorund);
+    background-color: var(--background);
     margin-left: calc((100vw - 100%) / -2) !important;
     padding-left: calc((100vw - 100%) / 2);
     margin-right: calc((100vw - 100%) / -2) !important;
     padding-right: calc((100vw - 100%) / 2);
     padding-top: 2rem;
     padding-bottom: 2rem;
+    font-size: var(--font-size-xlarge);
 }
+
+h2.title {
+    background-color: var(--background);
+    margin-left: calc((100vw - 100%) / -2) !important;
+    padding-left: calc((100vw - 100%) / 2);
+    margin-right: calc((100vw - 100%) / -2) !important;
+    padding-right: calc((100vw - 100%) / 2);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: var(--font-size-large);
+}
+
+.footer {
+    background-color: rgb(228, 251, 248);
+    position: relative;
+    margin-bottom: -4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: var(--font-size-small);
+}
+
+.br {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-container {
+    background-color: rgba(var(--background-variable), 0.6);
+    display: block;
+    width: 500px;
+    height: contain;
+    padding: 1rem;
+    border-top-width: 5px !important;
+    border-top: inset;
+    border-radius: 5px;
+    border-color: var(--background-link);
+    transition: 0.15s ease;
+    margin: 20px;
+}
+
+    .page-container:hover{
+        transition: 0.15s ease;
+        transform: translate(-10px, -10px);
+        box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 10px;
+    }
+
+    @media (max-width: 1200px){
+        .page-container {
+            width: 300px;
+        }
+    }
 
 .page-link {
     background-color: var(--background-link) !important;
     transition: 0.25s;
     outline: none !important;
-    font-size: 2rem;
+    font-size: var(--font-size-medium);
     border: none !important;
-    text-decoration: underline !important;
+    border-radius: 5px;
 }
 
     .page-link:hover {
@@ -31,7 +131,6 @@
         box-shadow: 0px 5px 10px var(--active-button-shadow);
         transition: 0.25s;
         outline: none !important;
-        font-size: 2rem;
     }
 
     .page-link:active {
@@ -39,5 +138,4 @@
         box-shadow: 0px 0px 10px var(--active-button-shadow);
         transition: 0.25s;
         outline: none !important;
-        font-size: 2rem;
     }

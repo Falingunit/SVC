@@ -1,0 +1,13 @@
+﻿@page
+@model HealthEducationPostModel
+
+@{
+    ViewData["Title"] = "Blog Post Details";
+}
+<div class="container" style="margin-top: 2rem;">
+    <h1>@Model.BlogPost.Title</h1>
+    <div>@Html.Raw(Model.BlogPost.Content)</div>
+    <p><small>@Model.BlogPost.DateCreated</small></p>
+
+    <a asp-page="./HealthEducationIndex">Back to List</a>
+</div>

@@ -1,0 +1,88 @@
+﻿@page
+@model SVC.Pages.Departments.DepartmentsModel
+@{
+    ViewData["Title"] = "Dermatology Clinic";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/departmentpages.css" />
+</head>
+
+<main role="main">
+    <div class="container">
+        <h1 class="text-center title">Dermatology Clinic</h1>
+
+        <p class="text-start col">
+            Welcome to the Dermatology Clinic at S V Clinic. We hold a specialized dermatology clinic every month on the third Sunday from 10 AM. Please note that an appointment is mandatory.<span class="br"></span>
+            Dr. Bharathi's expertise in dermatology ensures that patients receive the highest standard of care for their skin health. Whether it's managing common skin conditions or providing advanced cosmetic treatments, our clinic is equipped to meet your dermatological needs.
+        </p>
+
+        <div class="row hod">
+            <div class="col d-flex flex-column">
+                <h3>Head of the department: </h3>
+                <h4>Dr. M. N. Bharathi</h4>
+                <h5>M.B.B.S., D.D.V.L.</h5>
+            </div>
+
+            <div class="col-sm-10 d-flex flex-column hod-image">
+                <img src="~/images/front-reception.jpg" style="width: 100%" />
+            </div>
+        </div>
+
+         <h2 class="title">Services we offer:</h2>
+        <ul class="list-group-flush" style="margin-left:5rem;">
+            <li>
+                <p class="service-description service-title">
+                    Acne Care
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Scar/Wart/Mole Treatment
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Cautery (Electric/RF)
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Skin Biopsy
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Vitiligo Therapy
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Chronic Ulcer Treatment
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Hair Fall Treatment
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Cosmetic Care
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Leprosy Treatment
+                </p>
+            </li>
+            <li>
+                <p class="service-description service-title">
+                    Venereal Diseases/STD Treatment
+                </p>
+            </li>
+        </ul>
+    </div>
+</main>

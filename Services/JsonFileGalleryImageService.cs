@@ -9,21 +9,29 @@ namespace SVC.Services
 
         public string Prefix {  get; set; }
 
-        public JsonFileGalleryImageService(IWebHostEnvironment webHostEnvironment)
+        public GalleryAlbum[] Albums { get; set; }
+
+		private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "gallery", "gallerydata.json");
+
+		public JsonFileGalleryImageService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
             Prefix = "images/";
+
+			using var jsonFileReader = File.OpenText(JsonFileName);
+			Albums = JsonSerializer.Deserialize<GalleryAlbum[]>(jsonFileReader.ReadToEnd(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+		    if (Albums == null)
+            {
+                throw new Exception("Unable to get album data!");
+            }
         }
 
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "gallery", "gallerydata.json");
 
         public IEnumerable<GalleryImage> GetImages(string albumName)
         {
-            using var jsonFileReader = File.OpenText(JsonFileName);
-            var albums = JsonSerializer.Deserialize<GalleryAlbum[]>(jsonFileReader.ReadToEnd(), new JsonSerializerOptions {PropertyNameCaseInsensitive = true});
-            foreach (GalleryAlbum album in albums)
+            foreach (GalleryAlbum album in this.Albums)
             {
                 if (album.name == albumName)
                 {
@@ -35,7 +43,7 @@ namespace SVC.Services
                 }
             }
 
-            throw new ArgumentException("Given album doesnt exist");
+            throw new ArgumentException("Given album doesnt exist. {" + albumName + "}");
         }
     }
 }

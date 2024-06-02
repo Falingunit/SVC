@@ -1,0 +1,45 @@
+﻿.hero-image {
+    position: relative;
+    height: clamp(100px, 35vw, 500px);
+    overflow: hidden;
+}
+
+.hero-img {
+    height: clamp(100px, 100vh, 500px);
+    object-position: 0px -250px;
+    object-fit: cover;
+    top: 100%;
+    left: 100%;
+    offset-anchor: top;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--background);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: var(--background-alpha);
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    backdrop-filter: blur(10px); /* Blurs the area behind the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow for better contrast */
+}
+
+.intro-paragraph {
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+
+.service-box {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    transition: transform 0.2s;
+}
+
+    .service-box:hover {
+        transform: scale(1.05);
+    }

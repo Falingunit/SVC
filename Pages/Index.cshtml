@@ -1,42 +1,42 @@
 ﻿@page
-@model IndexModel
+@model SVC.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
     Layout = "Shared/_Layout.cshtml";
 }
 
 <head>
-    <link href="~/css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
 </head>
 
-
-<main class="container-fluid" style="z-index=2">
-    <img src="~/images/front-outside.jpg" style="width:100%; max-height: 500px; object-fit: cover; object-position: 0px -250px" />
-
-    <div class="text-center intro-paragraph">
-        Founded in 2013, S V Clinic is a 30-bed secondary healthcare facility located in a semi-urban area. Our mission is to provide evidence-based medical care at an affordable cost. We offer state-of-the-art care in emergency medicine, general medicine, and pediatrics, ensuring high-quality treatment for all our patients.
+<main>
+    <div class="container-fluid hero-image position-relative p-0">
+        <img src="~/images/front-outside.jpg" class="w-100 hero-img" />
+        <div class="hero-text position-absolute text-center">
+            <h1 class="display-1 text-nowrap">Welcome to S V Clinic</h1>
+            <p class="lead text-nowrap">Providing Quality Healthcare Since 2013</p>
+        </div>
     </div>
-
-    <h2 style="padding-top: 5rem">Our services</h2>
-
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="col text-center boxed">
-            <p class="display-6">Emergency Medicine</p>
-            <p>
-                Available 24/7 to provide immediate care for urgent medical needs.
-            </p>
+    <div class="container">
+        <div class="text-center intro-paragraph my-5">
+            <p class="lead">Founded in 2013, S V Clinic is a 30-bed secondary healthcare facility located in a semi-urban area. Our mission is to provide evidence-based medical care at an affordable cost. We offer state-of-the-art care in emergency medicine, general medicine, and pediatrics, ensuring high-quality treatment for all our patients.</p>
         </div>
-        <div class="col text-center boxed">
-            <p class="display-6">General Medicine</p>
-            <p>
-                Comprehensive care for a wide range of medical conditions.
-            </p>
-        </div>
-        <div class="col text-center boxed">
-            <p class="display-6">Pediatric Medicine</p>
-            <p style="padding-bottom: 1.5rem; padding-top: 1.5rem">
-                Specialized care for infants, children, and adolescents.
-            </p>
+
+        <h2 class="text-center mb-4">Our Primary Services</h2>
+
+        <div class="d-flex justify-content-around align-items-stretch">
+            <div class="col-md-3 text-center service-box p-3 mx-2">
+                <h3 class="display-6">Emergency Medicine</h3>
+                <p>Available 24/7 to provide immediate care for urgent medical needs.</p>
+            </div>
+            <div class="col-md-3 text-center service-box p-3 mx-2">
+                <h3 class="display-6">General Medicine</h3>
+                <p>Comprehensive care for a wide range of medical conditions.</p>
+            </div>
+            <div class="col-md-3 text-center service-box p-3 mx-2">
+                <h3 class="display-6">Pediatric Medicine</h3>
+                <p>Specialized care for infants, children, and adolescents.</p>
+            </div>
         </div>
     </div>
 </main>
