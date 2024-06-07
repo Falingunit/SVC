@@ -9,13 +9,16 @@ namespace SVC.Models
         public int Id { get; set; }
 
         [Column(TypeName = "varchar(255)")]
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
         [Column(TypeName = "text")]
-        public string Content { get; set; }
+        public required string Content { get; set; }
 
         [Column(TypeName = "text")]
-        public string Gist { get; set; }
+        public string? Gist { get; set; }
+
+        [Column(TypeName ="text")]
+        public string? BannerImagePath { get; set; }
 
         [Column(TypeName = "datetime")]
         public DateTime DateCreated { get; set; }

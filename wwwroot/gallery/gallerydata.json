@@ -1,6 +1,6 @@
 [
   {
-    "name": "general",
+    "name": "General",
     "description": "testing",
     "images": [
       {
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "name": "triages",
+    "name": "Wards and triages",
     "description": "tetetestnining",
     "images": [
       {
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "name": "pediatric",
+    "name": "Department of Pediatrics",
     "description": "Pediatric",
     "images": [
       {

@@ -1,42 +1,87 @@
-﻿main {
-    padding-top: 1rem;
-    position: relative; /* Ensure main is positioned relative */
-    z-index: 1; /* Ensure main content is above the blur overlay */
-    backdrop-filter: brightness(1.1) blur(8px);
-    height: 100%;
+﻿.hero-image {
+    position: relative;
+    height: clamp(100px, 35vw, 500px);
+    overflow: hidden;
+}
+
+.hero-img {
+    height: clamp(100px, 100vh, 500px);
+    object-position: 0px -250px;
+    object-fit: cover;
+    top: 100%;
+    left: 100%;
+    offset-anchor: top;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--background);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: var(--background-alpha);
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    backdrop-filter: blur(10px); /* Blurs the area behind the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow for better contrast */
 }
 
 .intro-paragraph {
-    background-color: rgba(104, 255, 238, 0.7);
-    padding: 10px;
-    font-size: 30px;
-    backdrop-filter:blur(10px);
-    width: 100%;
-    padding-left: 20%;
-    padding-right: 20%;
+    font-size: 1.25rem;
+    margin: 2rem 0;
 }
 
-.boxed {
-    background-color: rgba(104, 255, 238, 0.7);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    font-size: 30px;
-    transition-duration: 0.25s;
+.service-box {
+    background-color: var(--background);
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    transition: transform 0.2s;
 }
 
-    .boxed:hover {
-        background-color: rgb(60, 134, 126, 0.70);
-        border-radius: 5px;
-        padding: 10px;
-        margin: 10px;
-        font-size: 30px;
-        box-shadow: 5px 5px 10px rgb(24, 59, 55);
+    .service-box:hover {
+        transform: scale(1.05);
     }
 
-.bg-image {
+.blog-post-container {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-post-list {
+    display: inline-flex;
+}
+
+.arrow-button {
     position: fixed;
-    height: 100%;
-    filter: brightness(1.1) blur(2.5px);
-    -webkit-filter: brightness(1.1) blur(2.5px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+#left-arrow.disabled,
+#right-arrow.disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
 }

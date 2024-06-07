@@ -33,8 +33,6 @@ var dropdownLinks = document.querySelectorAll('.dropdown-toggler');
 dropdownLinks.forEach(function(link) {
     link.addEventListener('click', handleDropdownClick);
 });
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () { myFunction() };
 
 function resizeMap() {
     var map = document.getElementById('map');

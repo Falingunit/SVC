@@ -6,9 +6,10 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/homepage.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
 </head>
 
+<script src="~/js/home.js"></script>
 <main>
     <div class="container-fluid hero-image position-relative p-0">
         <img src="~/images/front-outside.jpg" class="w-100 hero-img" />
@@ -25,18 +26,45 @@
         <h2 class="text-center mb-4">Our Primary Services</h2>
 
         <div class="d-flex justify-content-around align-items-stretch">
-            <div class="col-md-3 text-center service-box p-3 mx-2">
+            <div class="col-md-3 text-center service-box p-3 mx-2" style="position: relative;">
                 <h3 class="display-6">Emergency Medicine</h3>
-                <p>Available 24/7 to provide immediate care for urgent medical needs.</p>
+                <p style="font-size: clamp(12px, 1.5vw, 18px);">Available 24/7 to provide immediate care for urgent medical needs.</p>
+                <a asp-page="/Departments/EmergencyMedicine"><span class="div-link"></span></a>
             </div>
-            <div class="col-md-3 text-center service-box p-3 mx-2">
+            <div class="col-md-3 text-center service-box p-3 mx-2" style="position: relative;">
                 <h3 class="display-6">General Medicine</h3>
                 <p>Comprehensive care for a wide range of medical conditions.</p>
+                <a asp-page="/Departments/Medicine"><span class="div-link"></span></a>
             </div>
-            <div class="col-md-3 text-center service-box p-3 mx-2">
+            <div class="col-md-3 text-center service-box p-3 mx-2" style="position: relative;">
                 <h3 class="display-6">Pediatric Medicine</h3>
                 <p>Specialized care for infants, children, and adolescents.</p>
+                <a asp-page="/Departments/Pediatrics"><span class="div-link"></span></a>
             </div>
         </div>
+
+        <h2 class="text-center" style="margin-top: 2rem;">Check out our Health Education articles by our doctors: </h2>
+        <div class="carousel-wrapper">
+            <button id="prev" class="nav-button">‹</button>
+            <div class="scroll-container">
+                @foreach (var item in Model.BlogPosts)
+                {
+                    if (item.DateCreated > DateTime.Now.AddDays(-7))
+                    {
+                        <div class="page-container">
+                            <p class="text-muted">@item.DateCreated</p>
+                            <h2 class="display-2" style="font-weight: 500 !important; margin-top: 1rem">@item.Title</h2>
+                            <hr />
+                            <img src="@item.BannerImagePath" style="width: 100%; height: 200px; object-fit: cover; object-position: 50% 50%;" />
+                            <p class="text-start">@item.Gist</p>
+                            <a asp-page="Blog/HealthEducationPost" asp-route-id="@item.Id"><span class="div-link"></span></a>
+                        </div>
+                    }
+                }
+            </div>
+            <button id="next" class="nav-button">›</button>
+        </div>
+
+
     </div>
 </main>

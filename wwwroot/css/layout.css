@@ -22,6 +22,10 @@ body {
     font-weight: 600 !important;
 }
 
+.navbar-colored-with-bg {
+    background-color: var(--main-theme);
+}
+
 .navbar-colored {
     color: black !important;
     transition: 0.25s;

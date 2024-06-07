@@ -30,6 +30,9 @@ namespace SVC.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("BannerImagePath")
+                        .HasColumnType("text");
+
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("text");
@@ -38,7 +41,6 @@ namespace SVC.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("Gist")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")

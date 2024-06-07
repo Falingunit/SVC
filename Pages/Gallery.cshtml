@@ -12,93 +12,39 @@
 
 <main name="main">
     <div class="container">
-        <h1 class="text-center">Gallery</h1>
-
-        <div>
-            <h3>Albums</h3>
-        </div>
+        <h1 class="text-center title">Gallery</h1>
 
         <!-- Example of two gallery instances -->
-        <div class="gallery-instance">
-            <div class="gallery-container d-flex justify-content-center align-items-center position-relative">
-                <div class="gallery position-relative overflow-hidden">
+        @foreach (var album in Model.GalleryService.Albums){
+            <h2 style="margin-top: 2rem;">@album.name:</h2>
+
+            <div class="gallery-instance">
+                <div class="gallery-container d-flex justify-content-center align-items-center position-relative">
+                    <div class="gallery position-relative overflow-hidden">
+                        @{
+                            var images = album.images;
+                            for (int i = 0; i < images.Count(); i++)
+                            {
+                                var image = images.ElementAt(i);
+                                <div class="gallery-item position-absolute">
+                                    <img class="gallery-image" itemid="@i" src="~/images/@image.Path" />
+                                    <div class="caption">@image.Description</div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="thumbnail-list d-flex justify-content-center mt-3">
                     @{
-                        var images = Model.GalleryService.GetImages("general");
                         for (int i = 0; i < images.Count(); i++)
                         {
                             var image = images.ElementAt(i);
-                            <div class="gallery-item position-absolute">
-                                <img class="gallery-image" itemid="@i" src="@image.Path" />
-                                <div class="caption">@image.Description</div>
-                            </div>
+                            <img class="thumbnail-image mx-2" itemid="thumb-@i" src="~/images/@image.Path" style="width: 50px; height: auto; cursor: pointer;" />
                         }
                     }
                 </div>
             </div>
-            <div class="thumbnail-list d-flex justify-content-center mt-3">
-                @{
-                    for (int i = 0; i < images.Count(); i++)
-                    {
-                        var image = images.ElementAt(i);
-                        <img class="thumbnail-image mx-2" itemid="thumb-@i" src="@image.Path" style="width: 50px; height: auto; cursor: pointer;" />
-                    }
-                }
-            </div>
-        </div>
-
-        <div class="gallery-instance">
-            <div class="gallery-container d-flex justify-content-center align-items-center position-relative">
-                <div class="gallery position-relative overflow-hidden">
-                    @{
-                        var images1 = Model.GalleryService.GetImages("triages");
-                        for (int i = 0; i < images1.Count(); i++)
-                        {
-                            var image = images1.ElementAt(i);
-                            <div class="gallery-item position-absolute">
-                                <img class="gallery-image" itemid="image-@i" src="@image.Path" />
-                                <div class="caption">@image.Description</div>
-                            </div>
-                        }
-                    }
-                </div>
-            </div>
-            <div class="thumbnail-list d-flex justify-content-center mt-3">
-                @{
-                    for (int i = 0; i < images1.Count(); i++)
-                    {
-                        var image = images1.ElementAt(i);
-                        <img class="thumbnail-image mx-2" itemid="thumb-@i" src="@image.Path" style="width: 50px; height: auto; cursor: pointer;" />
-                    }
-                }
-            </div>
-        </div>
-        
-        <div class="gallery-instance">
-            <div class="gallery-container d-flex justify-content-center align-items-center position-relative">
-                <div class="gallery position-relative overflow-hidden">
-                    @{
-                        var images2 = Model.GalleryService.GetImages("pediatric");
-                        for (int i = 0; i < images2.Count(); i++)
-                        {
-                            var image = images2.ElementAt(i);
-                            <div class="gallery-item position-absolute">
-                                <img class="gallery-image" itemid="image-@i" src="@image.Path" />
-                                <div class="caption">@image.Description</div>
-                            </div>
-                        }
-                    }
-                </div>
-            </div>
-            <div class="thumbnail-list d-flex justify-content-center mt-3">
-                @{
-                    for (int i = 0; i < images2.Count(); i++)
-                    {
-                        var image = images2.ElementAt(i);
-                        <img class="thumbnail-image mx-2" itemid="thumb-@i" src="@image.Path" style="width: 50px; height: auto; cursor: pointer;" />
-                    }
-                }
-            </div>
-        </div>
+        }
     </div>
 </main>
 
