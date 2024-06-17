@@ -12,7 +12,18 @@
         </h1>
         <p class="">
             At our clinic, we believe in more than just providing monetary benefits; we treat our staff as family members. Our cordial and supportive work environment promotes learning and career growth, ensuring that each team member feels valued and encouraged to thrive. While we offer remuneration at market price, the real reward is living a happy and fulfilling life as part of our community.<span class="br"><hr /></span>
-            Currently the following vacancies are open:
+            @if (Model.positionService.GetVacantPositions().Count() == 0)
+            {
+                <p>No vacancies are currently open.</p>
+            }
+            else if (Model.positionService.GetVacantPositions().Count() == 1)
+            {
+                <p>Currently the following vacancy is open:</p>
+            }
+            else
+            {
+                <p>Currently the following vacancies are open:</p>
+            }
         </p>
         <div class="grid">
         @foreach (var position in Model.positionService.GetVacantPositions())

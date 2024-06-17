@@ -10,7 +10,7 @@ using SVC.DatabaseContexts;
 
 namespace SVC.Migrations
 {
-    [DbContext(typeof(BlogContext))]
+    [DbContext(typeof(SVCDatabaseContext))]
     partial class BlogContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

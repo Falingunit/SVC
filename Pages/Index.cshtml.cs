@@ -8,15 +8,15 @@ namespace SVC.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private BlogContext _context;
+        private SVCDatabaseContext _context;
 
-        public IndexModel(ILogger<IndexModel> logger, BlogContext context)
+        public IndexModel(ILogger<IndexModel> logger, SVCDatabaseContext context)
         {
             _logger = logger;
             _context = context;
         }
 
-        public IList<BlogPost> BlogPosts { get; private set; }
+        public IList<HealthEducationPost> BlogPosts { get; private set; }
 
         public async Task OnGetAsync()
         {

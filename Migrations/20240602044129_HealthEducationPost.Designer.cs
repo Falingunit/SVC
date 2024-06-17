@@ -11,7 +11,7 @@ using SVC.DatabaseContexts;
 
 namespace SVC.Migrations
 {
-    [DbContext(typeof(BlogContext))]
+    [DbContext(typeof(SVCDatabaseContext))]
     [Migration("20240602044129_HealthEducationPost")]
     partial class HealthEducationPost
     {

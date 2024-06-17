@@ -12,14 +12,14 @@ namespace SVC.Pages.Blog
 
     public class HealthEducationPostModel : PageModel
     {
-        private readonly BlogContext _context;
+        private readonly SVCDatabaseContext _context;
 
-        public HealthEducationPostModel(BlogContext context)
+        public HealthEducationPostModel(SVCDatabaseContext context)
         {
             _context = context;
         }
 
-        public BlogPost BlogPost { get; set; }
+        public HealthEducationPost BlogPost { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

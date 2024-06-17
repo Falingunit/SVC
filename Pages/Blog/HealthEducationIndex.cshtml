@@ -5,7 +5,7 @@
     ViewData["Title"] = "Health Education Posts";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 
-    IList<Models.BlogPost> GetPostsInReversedOrder()
+    IList<Models.HealthEducationPost> GetPostsInReversedOrder()
     {
         return Model.BlogPosts.Reverse().ToList();
     }

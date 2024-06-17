@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVC", "SVC.csproj", "{24DC2B5D-F449-4877-A86E-5E9C288511A2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVCWebsiteManager", "..\..\SVCWebsiteManager\SVCWebsiteManager.csproj", "{B7BA9FA4-8E36-4F61-83D3-0AEA99968934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{24DC2B5D-F449-4877-A86E-5E9C288511A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24DC2B5D-F449-4877-A86E-5E9C288511A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24DC2B5D-F449-4877-A86E-5E9C288511A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BA9FA4-8E36-4F61-83D3-0AEA99968934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BA9FA4-8E36-4F61-83D3-0AEA99968934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BA9FA4-8E36-4F61-83D3-0AEA99968934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BA9FA4-8E36-4F61-83D3-0AEA99968934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

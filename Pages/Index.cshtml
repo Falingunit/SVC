@@ -43,27 +43,19 @@
             </div>
         </div>
 
-        <h2 class="text-center" style="margin-top: 2rem;">Check out our Health Education articles by our doctors: </h2>
-        <div class="carousel-wrapper">
-            <button id="prev" class="nav-button">‹</button>
-            <div class="scroll-container">
-                @foreach (var item in Model.BlogPosts)
-                {
-                    if (item.DateCreated > DateTime.Now.AddDays(-7))
-                    {
-                        <div class="page-container">
-                            <p class="text-muted">@item.DateCreated</p>
-                            <h2 class="display-2" style="font-weight: 500 !important; margin-top: 1rem">@item.Title</h2>
-                            <hr />
-                            <img src="@item.BannerImagePath" style="width: 100%; height: 200px; object-fit: cover; object-position: 50% 50%;" />
-                            <p class="text-start">@item.Gist</p>
-                            <a asp-page="Blog/HealthEducationPost" asp-route-id="@item.Id"><span class="div-link"></span></a>
-                        </div>
-                    }
-                }
+        <h2 class="text-center" style="margin-top: 2rem;">Check out the latest Health Education article by our doctors: </h2>
+
+        @{
+            var item = Model.BlogPosts.Last();
+            <div class="page-container" style="position: relative; width: 100%;">
+                <p class="text-muted">@item.DateCreated</p>
+                <h2 class="display-2" style="font-weight: 500 !important; margin-top: 1rem">@item.Title</h2>
+                <hr />
+                <img src="@item.BannerImagePath" style="width: 100%; height: 200px; object-fit: cover; object-position: 50% 50%;" />
+                <p class="text-start">@item.Gist</p>
+                <a asp-page="Blog/HealthEducationPost" asp-route-id="@item.Id"><span class="div-link"></span></a>
             </div>
-            <button id="next" class="nav-button">›</button>
-        </div>
+        }
 
 
     </div>
