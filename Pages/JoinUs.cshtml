@@ -28,10 +28,55 @@
         <div class="grid">
         @foreach (var position in Model.positionService.GetVacantPositions())
         {
-            <div class="page-container" style="position: relative;">
+            <div class="page-container" style="position: relative; width: 75vw;">
                 <h2 class="text-center">@position.Title</h2>
-                <p>@Html.Raw(Model.GetDescription(position))</p>
-                <h3 class="text-muted">@position.ExpectedSalary</h3>
+                <p class="text-muted">Final date for application: <b>@position.Deadline</b></p>
+                
+                <b>Working Shift: @position.Shift</b>
+
+                <p>@position.Description</p>
+
+                <hr />
+
+                <div>
+                    <h4>Qualifications:</h4>
+                    <ul>
+                        @foreach (string item in position.Education)
+                        {
+                        <li>@item</li>
+                        }
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Experience:</h4>
+                    <ul>
+                        @foreach (string item in position.Experience)
+                        {
+                        <li>@item</li>
+                        }
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Skills:</h4>
+                    <ul>
+                        @foreach (string item in position.Skills)
+                        {
+                        <li>@item</li>
+                        }
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Responsibilites:</h4>
+                    <ul>
+                        @foreach (string item in position.Responsibilites)
+                        {
+                        <li>@item</li>
+                        }
+                    </ul>
+                </div>
                 <a class="div-link" href="@position.Forms" target="_blank"><span></span></a>
             </div>
         }

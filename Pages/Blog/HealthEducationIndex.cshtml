@@ -38,4 +38,21 @@
             }
         }
     </div>
+    <hr />
+    <h1>All Posts:</h1>
+    <div class="grid">
+        @foreach (var item in GetPostsInReversedOrder())
+        {
+            <div class="page-container" style="position: relative">
+                <p class="text-muted">@item.DateCreated</p>
+                <h2 class="display-2" style="font-weight: 500 !important; margin-top: 1rem">@item.Title</h2>
+                <hr />
+                <div class="" style="height: 200px; width: 100%; overflow: hidden;">
+                    <img src="@item.BannerImagePath" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+                </div>
+                <p class="text-start">@item.Gist</p>
+                <a asp-page="./HealthEducationPost" asp-route-id="@item.Id"><span class="div-link"></span></a>
+            </div>
+        }
+    </div>
 </div>

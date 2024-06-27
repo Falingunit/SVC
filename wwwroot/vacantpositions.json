@@ -1,8 +1,29 @@
 [
   {
     "title": "Nursing Superindent",
-    "description": "Supervising nursing departmental activities /n Requirements: /n -Requirement 1 /n -requirement 2",
-    "expectedsalary": "",
-    "forms": "https://www.youtube.com"
+    "deadline": "10-10-2022",
+    "education": [
+      "BSc in Nursing"
+    ],
+    "shift": "Fulltime",
+    "experience": [
+      "Minimum 5 years of experience as a staff nurse.",
+      "Minimum 1 year of experience as a nursing supervisor."
+    ],
+    "skills": [
+      "Strong leadership and team management skills.",
+      "Excellent communication and interpersonal skills.",
+      "Ability to monitor and improve nursing quality.",
+      "Proficient in creating and maintaining duty schedules."
+    ],
+    "responsibilites": [
+      "Lead and manage the nursing team.",
+      "Monitor and ensure the quality of nursing care.",
+      "Provide continuous training and development for nursing staff.",
+      "Maintain duty schedules for various nursing positions.",
+      "Ensure compliance with healthcare regulations and standards."
+    ],
+    "description": "Supervising nursing departmental activities.",
+    "forms": "https://docs.google.com/forms/d/e/1FAIpQLSdSRSMiZM3-C0qg13ap4bLhiAt_tJtHJljJJuGLkWn2bFVM3g/viewform?usp=sf_link"
   }
 ]
